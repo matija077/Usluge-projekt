@@ -1,6 +1,7 @@
 rm(list=ls())
 
 require(DAAG)
+#require(caret)
 
 data = cars
 speed = data$speed
@@ -49,4 +50,3 @@ dist = data$dist
   
 #cross-validation
   y = cv.lm(data, form.lm = dist~speed,m = 10, seed=110, dots=F)
-
